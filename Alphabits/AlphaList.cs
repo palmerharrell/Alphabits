@@ -8,16 +8,25 @@ namespace Alphabits
 {
   public class AlphaList
   {
-    // public AlphaList()
-    // {
-    //   // Anything to put here?
-    // }
+    public AlphaList()
+    {
+      // Constructor required by exercise instructions
+    }
 
     private List<char> _letterList = new List<char>();
 
     public bool addChar(char newChar)
     {
-      return true; // This should return true if letter, false otherwise
+      if (Char.IsLetter(newChar))
+      {
+        _letterList.Add(newChar);
+        return true;
+      }
+      else
+      {
+        return false;
+      }
+      
     }
 
     public int listLength()
