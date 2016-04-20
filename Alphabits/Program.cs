@@ -6,10 +6,13 @@ using System.Threading.Tasks;
 
 namespace Alphabits
 {
-    class Program
+  class Program
+  {
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
-        {
-        }
+      // TEST
+      var testList = new AlphaList();
+      Console.WriteLine("List Length: {0}", testList.listLength());
     }
+  }
 }

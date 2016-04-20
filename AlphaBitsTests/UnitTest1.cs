@@ -8,6 +8,19 @@ namespace AlphaBitsTests
   public class UnitTest1
   {
     AlphaList testObj = new AlphaList();
+
+    [TestMethod]
+    public void addCharTestPass()
+    {
+      Assert.IsTrue(testObj.addChar('a'));
+    }
+
+    [TestMethod]
+    public void addCharTestFail()
+    {
+      Assert.IsFalse(testObj.addChar('1'));
+    }
+
     [TestMethod]
     public void listLengthTest()
     {

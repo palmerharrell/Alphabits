@@ -8,21 +8,21 @@ namespace Alphabits
 {
   public class AlphaList
   {
-    // public AlphaList()
-    // {
-    //   // Anything to put here?
-    // }
-
-    public List<char> letterList;
-
-    public void addChar(char newChar)
+    public AlphaList()
     {
-      Console.WriteLine(newChar);
+      // Anything to put here?
+    }
+
+    private List<char> _letterList = new List<char>();
+
+    public bool addChar(char newChar)
+    {
+      return true; // This should return true if letter, false otherwise
     }
 
     public int listLength()
     {
-      return letterList.Count;
+      return _letterList.Count;
     }
   }
 }
