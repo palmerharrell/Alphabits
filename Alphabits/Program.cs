@@ -10,9 +10,22 @@ namespace Alphabits
   {
     static void Main(string[] args)
     {
-      // TEST
-      var testList = new AlphaList();
-      Console.WriteLine("List Length: {0}", testList.listLength());
-    }
-  }
-}
+      AlphaList testList = new AlphaList();
+      bool gameOver = false;
+
+      while (!gameOver)
+      {
+        Console.WriteLine("\nEnter a letter.");
+        Console.Write("> ");
+        char userInput = Console.ReadKey().KeyChar;
+        Console.WriteLine("\nInput: {0}", userInput);
+        if (userInput == 'x') // Will check listLength.Count == 26
+        {
+          gameOver = true;
+          Console.WriteLine("\nWin!\n");
+        }
+      }
+      
+    } // Main
+  } // Program
+} // namespace

@@ -8,10 +8,10 @@ namespace Alphabits
 {
   public class AlphaList
   {
-    public AlphaList()
-    {
-      // Anything to put here?
-    }
+    // public AlphaList()
+    // {
+    //   // Anything to put here?
+    // }
 
     private List<char> _letterList = new List<char>();
 
