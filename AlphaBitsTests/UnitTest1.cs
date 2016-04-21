@@ -10,15 +10,15 @@ namespace AlphaBitsTests
     AlphaList testObj = new AlphaList();
 
     [TestMethod]
-    public void addCharTestPass()
+    public void isALetterTestPass()
     {
-      Assert.IsTrue(testObj.addChar('a'));
+      Assert.IsTrue(testObj.isALetter('a'));
     }
 
     [TestMethod]
-    public void addCharTestFail()
+    public void isALetterTestFail()
     {
-      Assert.IsFalse(testObj.addChar('1'));
+      Assert.IsFalse(testObj.isALetter('1'));
     }
 
     [TestMethod]
@@ -26,5 +26,13 @@ namespace AlphaBitsTests
     {
       Assert.AreEqual(0, testObj.listLength());
     }
+
+    [TestMethod]
+    public void inListTestPass()
+    {
+      testObj.addChar('a');
+      Assert.IsTrue(testObj.inList('A'));
+    }
+
   }
 }

@@ -15,18 +15,33 @@ namespace Alphabits
 
     private List<char> _letterList = new List<char>();
 
-    public bool addChar(char newChar)
+    public void addChar(char newChar)
     {
-      if (Char.IsLetter(newChar))
+      _letterList.Add(Char.ToUpper(newChar));
+    }
+
+    public bool isALetter(char letter)
+    {
+      if (Char.IsLetter(letter))
       {
-        _letterList.Add(newChar);
         return true;
       }
       else
       {
         return false;
       }
-      
+    }
+
+    public bool inList(char letter)
+    {
+      if (_letterList.Contains(Char.ToUpper(letter)))
+      {
+        return true;
+      }
+      else
+      {
+        return false;
+      }
     }
 
     public int listLength()
